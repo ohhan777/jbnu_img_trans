@@ -249,8 +249,8 @@ def val_one_epoch(val_dataloader, model, device):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--epochs', type=int, default=250, help='target epochs')
-    parser.add_argument('--batch-size', type=int, default=32, help='batch size')
-    parser.add_argument('--name', default='jbnu_imgtrans', help='name for the run')
+    parser.add_argument('--batch-size', type=int, default=2, help='batch size')
+    parser.add_argument('--name', default='jbnu_img_trans', help='name for the run')
     parser.add_argument('--save-dir', default='results', help='directory to save the results')
     parser.add_argument('--save-freq', type=int, default=1, help='save frequency')
 

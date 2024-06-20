@@ -48,9 +48,9 @@ class KariImgTransDataset(torch.utils.data.Dataset):
     def hr_transform(self, img):
         h, w = img.shape[:2]
 
-        # upsampling
-        new_h = np.int(h * self.scale_factor * self.hr_gsd / self.lr_gsd)
-        new_w = np.int(w * self.scale_factor * self.hr_gsd / self.lr_gsd)
+        # upsampling 
+        new_h =  int(h * self.scale_factor * self.hr_gsd / self.lr_gsd)
+        new_w =  int(w * self.scale_factor * self.hr_gsd / self.lr_gsd)
 
         img = cv2.resize(img, (new_w, new_h),
                          interpolation=cv2.INTER_CUBIC)
