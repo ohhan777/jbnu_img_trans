@@ -240,7 +240,7 @@ def val_one_epoch(val_dataloader, model, device):
         fake_y = model(ds_x)
         
         if i == 0:
-            for j in range(3):
+            for j in range(2):
                 save_file = os.path.join('outputs', 'val_%d.png' % j)
                 png_img = fake_y[j].mul(255.0).clamp(0,255).cpu().detach().numpy().squeeze(0).astype(np.uint8)
                 cv2.imwrite(save_file, png_img)
